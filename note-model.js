@@ -1,15 +1,7 @@
-function Note(){
-    this.myNotes = [];
+function Note(text){
+    this.text = text
 }
 
-Note.prototype.addNote = function(text) {
-    this.myNotes.push(text);
-};
-
 Note.prototype.getNotes = function() {
-    return this.myNotes;
-};
-
-Note.prototype.listNotes = function() {
-    
+    return this.text;
 };

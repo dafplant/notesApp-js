@@ -1,27 +1,31 @@
 function testMyNotesStartsEmpty(){
-    var note = new Note();
+    var note = new NoteList();
     assert.isTrue(note.getNotes().length === 0);
 };
 
 testMyNotesStartsEmpty();
 
-function testCanAddNewNote(){
-    var note = new Note();
-    note.addNote("First Note");
-    note.addNote("Second Note");
-    assert.isTrue(note.getNotes().length === 2);
-    console.log(note.myNotes);
-    assert.isEqualTo(note.getNotes()[1], "Second Note");
-};
 
-testCanAddNewNote();
-
-describe('can make a test using describe', function(){
-    var note = new Note();
-    assert.isTrue(note.getNotes().length === 0);
+describe('Add multiple note models to array', function(){
+    var note = new Note('manatee');
+    var notelist = new NoteList();
+    notelist.addNote(note);
+    expect(notelist.myNotes.length === 1);
 });
 
-it('can also make some it tests', function(){
-    var note = new Note();
-    assert.isTrue(note.getNotes().length === 0);
+
+describe('Storing a new Note model', function(){
+    var notelist = new NoteList();
+    notelist.storeModel('turtle');
+    notelist.storeModel('clownfish');
+    expect(notelist.myNotes.length === 2);
+});
+
+it('takes a note list model upon instantiation', function() {
+    var notelist = new NoteList();
+    notelist.storeModel('turtle');
+    var notelistview = new NoteListView(notelist);
+    assert.isTrue(notelistview.notelist, notelist); 
+    // var notelistview = new NoteListView();
+    // expect(notelistview)
 });
