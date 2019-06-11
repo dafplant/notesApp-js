@@ -16,7 +16,12 @@ function testCanAddNewNote(){
 
 testCanAddNewNote();
 
-describe('can make a test', function(){
+describe('can make a test using describe', function(){
+    var note = new Note();
+    assert.isTrue(note.getNotes().length === 0);
+});
+
+it('can also make some it tests', function(){
     var note = new Note();
     assert.isTrue(note.getNotes().length === 0);
 });
