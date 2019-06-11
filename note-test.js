@@ -15,3 +15,8 @@ function testCanAddNewNote(){
 };
 
 testCanAddNewNote();
+
+describe('can make a test', function(){
+    var note = new Note();
+    assert.isTrue(note.getNotes().length === 0);
+});
