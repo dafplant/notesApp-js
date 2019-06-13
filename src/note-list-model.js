@@ -4,6 +4,7 @@ function NoteList(){
 }
 
 NoteList.prototype.addNote = function(note) {
+    //note = new Note(text)
     this._myNotes.push(note);
 };
 
