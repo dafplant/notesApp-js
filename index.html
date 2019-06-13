@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<html>
 <head> 
-    
+    <title>Notes App</title>
 </head>
 
-<body>
+<body id="body">
+    <h1>Notes</h1>
+    <textarea id="textarea"></textarea>
+    <button id="create">Create</button>
 
 <div id="app"> hello </div>
 
@@ -14,12 +18,17 @@
 
 <!-- <script> Note.text </script> -->
 
-    <script src="src/note-controller.js"></script>
-    <script src="src/note-model.js"></script>
-    <script src="src/note-list-model.js"></script>
-    <script src="src/note-list-view.js"></script>
-    <script src="spec/assert.js"></script>
-    <script src="spec/test-framework.js"></script>
-    <script src="spec/note-test.js"></script>
 
 </body>
+
+
+<script src="src/note-model.js"></script>
+<script src="src/note-list-model.js"></script>
+<script src="src/note-list-view.js"></script>
+<script src="src/note-controller.js"></script>
+
+<script src="spec/assert.js"></script>
+<script src="spec/test-framework.js"></script>
+<script src="spec/note-test.js"></script>
+
+</html>
